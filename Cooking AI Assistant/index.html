@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cooking AI Assistant</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.12);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+      letter-spacing: 0.03em;
+    }
+    .subtitle {
+      color: #64748b;
+      margin-bottom: 24px;
+    }
+    .input-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    input[type="text"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    input[type="text"]:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+    button {
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s;
+    }
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.45);
+    }
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1.1fr 1.2fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      padding: 14px;
+      max-height: 420px;
+      overflow-y: auto;
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .card-subtitle {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 12px;
+    }
+
+    .recipe-item {
+      padding: 10px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      margin-bottom: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ffffff;
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    }
+    .recipe-item:hover {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      transform: translateY(-1px);
+    }
+    .recipe-item.selected {
+      border-color: #2563eb;
+      background: #e0edff;
+    }
+    .recipe-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .recipe-score {
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    .detail-section {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .detail-section h3 {
+      font-size: 14px;
+      margin: 10px 0 4px;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 4px 0 8px;
+    }
+    li {
+      margin-bottom: 3px;
+    }
+    .badge-row {
+      margin-top: 6px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: #e2e8f0;
+      color: #475569;
+    }
+
+    .step-footer {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .step-indicator {
+      font-size: 12px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cooking AI Assistant</h1>
+    <div class="subtitle">输入食材，获取推荐菜谱，并查看完整做法。</div>
+
+    <div class="input-row">
+      <input
+        id="ingredientsInput"
+        type="text"
+        placeholder="例如：鸡蛋, 西红柿, 土豆"
+      />
+      <button id="recommendBtn">推荐菜谱</button>
+    </div>
+
+    <div class="columns">
+      <div class="card" id="recommendCard">
+        <h2>推荐菜谱</h2>
+        <div class="card-subtitle">最多显示 Top 3，点击查看详细步骤。</div>
+        <div id="recommendList"></div>
+      </div>
+
+      <div class="card" id="detailCard">
+        <h2>菜谱详情</h2>
+        <div class="card-subtitle" id="detailSubtitle">请选择左侧一个菜谱。</div>
+        <div id="detailContent" class="detail-section"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 使用相对路径，确保与后端部署路径一致
+    const API_BASE = "";
+
+    const ingredientsInput = document.getElementById("ingredientsInput");
+    const recommendBtn = document.getElementById("recommendBtn");
+    const recommendList = document.getElementById("recommendList");
+    const detailSubtitle = document.getElementById("detailSubtitle");
+    const detailContent = document.getElementById("detailContent");
+
+    let currentRecipeId = null;
+
+    async function fetchRecommend() {
+      const ingredients = ingredientsInput.value.trim();
+      if (!ingredients) {
+        alert("请输入至少一个食材，例如：鸡蛋, 西红柿");
+        return;
+      }
+      recommendBtn.disabled = true;
+      recommendBtn.textContent = "加载中...";
+      try {
+        const resp = await fetch(`${API_BASE}/recommend`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ingredients })
+        });
+        if (!resp.ok) {
+          throw new Error("推荐接口请求失败");
+        }
+        const data = await resp.json();
+        renderRecommendList(data.results || []);
+      } catch (err) {
+        console.error(err);
+        alert("请求失败，请确认后端已启动并检查浏览器控制台。");
+      } finally {
+        recommendBtn.disabled = false;
+        recommendBtn.textContent = "推荐菜谱";
+      }
+    }
+
+    function renderRecommendList(list) {
+      recommendList.innerHTML = "";
+      currentRecipeId = null;
+      detailContent.innerHTML = "";
+      detailSubtitle.textContent = "请选择左侧一个菜谱。";
+
+      if (!list.length) {
+        recommendList.innerHTML = "<div style='font-size:13px;color:#64748b;'>没有匹配到合适的菜谱，请尝试更换或增加食材。</div>";
+        return;
+      }
+
+      list.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "recipe-item";
+        div.dataset.recipeId = item.id;
+        div.innerHTML = `
+          <div class="recipe-name">${item.name}</div>
+          <div class="recipe-score">匹配度：${(item.match_score * 100).toFixed(0)}%</div>
+        `;
+        div.addEventListener("click", () => selectRecipe(item.id, div));
+        recommendList.appendChild(div);
+      });
+    }
+
+    async function selectRecipe(recipeId, element) {
+      document.querySelectorAll(".recipe-item").forEach(el => el.classList.remove("selected"));
+      element.classList.add("selected");
+
+      currentRecipeId = recipeId;
+      detailContent.innerHTML = "";
+      detailSubtitle.textContent = "加载菜谱详情中...";
+
+      try {
+        const resp = await fetch(`${API_BASE}/select_recipe`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ recipe_id: recipeId })
+        });
+        if (!resp.ok) {
+          throw new Error("select_recipe 请求失败");
+        }
+        const recipe = await resp.json();
+        renderRecipeDetail(recipe);
+      } catch (err) {
+        console.error(err);
+        alert("加载菜谱失败，请检查控制台。");
+      }
+    }
+
+    function renderRecipeDetail(recipe) {
+      detailSubtitle.textContent = "";
+
+      let ingHtml = (recipe.ingredients || [])
+        .map(i => `<li>${i.name}：${i.amount}${i.unit}</li>`)
+        .join("");
+      let seaHtml = (recipe.seasonings || [])
+        .map(i => `<li>${i.name}：${i.amount}${i.unit}</li>`)
+        .join("");
+      let stepsHtml = (recipe.steps || [])
+        .map((step, idx) => `<li>步骤 ${idx + 1}：${step}</li>`)
+        .join("");
+
+      detailContent.innerHTML = `
+        <div style="font-size:18px;font-weight:600;margin-bottom:6px;">${recipe.name}</div>
+        <div class="badge-row">
+          <span class="badge">用时：${recipe.cooking_time} 分钟</span>
+          <span class="badge">难度：${recipe.difficulty}</span>
+        </div>
+
+        <h3>食材</h3>
+        <ul>${ingHtml || "<li>暂无</li>"}</ul>
+
+        <h3>调料</h3>
+        <ul>${seaHtml || "<li>暂无</li>"}</ul>
+
+        <h3>步骤</h3>
+        <ul>${stepsHtml || "<li>暂无步骤</li>"}</ul>
+      `;
+    }
+
+    recommendBtn.addEventListener("click", fetchRecommend);
+
+    ingredientsInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        fetchRecommend();
+      }
+    });
+  </script>
+</body>
+</html>
+

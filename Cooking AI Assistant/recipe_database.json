@@ -1,0 +1,514 @@
+[
+  {
+    "id": "recipe_1",
+    "name": "西红柿炒蛋",
+    "ingredients": [
+      { "name": "鸡蛋", "amount": "3", "unit": "个" },
+      { "name": "西红柿", "amount": "2", "unit": "个" },
+      { "name": "葱", "amount": "10", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "白糖", "amount": "2", "unit": "g" },
+      { "name": "植物油", "amount": "15", "unit": "ml" }
+    ],
+    "steps": [
+      "鸡蛋打入碗中，加入少许盐打散备用。",
+      "西红柿洗净切小块，葱切葱花备用。",
+      "锅中倒入植物油，烧至六成热，倒入蛋液快速翻炒至凝固，盛出备用。",
+      "锅中再加少许油，下葱花爆香，加入西红柿翻炒出汁。",
+      "加入盐和白糖调味，倒入炒好的鸡蛋翻炒均匀即可出锅。"
+    ],
+    "cooking_time": "15",
+    "difficulty": "easy"
+  },
+  {
+    "id": "recipe_2",
+    "name": "家常炒饭",
+    "ingredients": [
+      { "name": "米饭", "amount": "300", "unit": "g" },
+      { "name": "鸡蛋", "amount": "2", "unit": "个" },
+      { "name": "胡萝卜", "amount": "30", "unit": "g" },
+      { "name": "青豆", "amount": "30", "unit": "g" },
+      { "name": "火腿肠", "amount": "40", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "生抽", "amount": "5", "unit": "ml" },
+      { "name": "植物油", "amount": "15", "unit": "ml" },
+      { "name": "胡椒粉", "amount": "1", "unit": "g" }
+    ],
+    "steps": [
+      "胡萝卜切丁，火腿肠切丁备用。",
+      "鸡蛋打散，米饭提前散开备用。",
+      "锅中倒入油，倒入蛋液炒成小块鸡蛋，盛出备用。",
+      "锅中再加少许油，下胡萝卜丁、青豆、火腿丁翻炒熟。",
+      "加入米饭翻炒均匀，倒入生抽、盐、胡椒粉调味。",
+      "最后加入炒好的鸡蛋翻炒均匀即可出锅。"
+    ],
+    "cooking_time": "20",
+    "difficulty": "easy"
+  },
+  {
+    "id": "recipe_3",
+    "name": "宫保鸡丁",
+    "ingredients": [
+      { "name": "鸡胸肉", "amount": "300", "unit": "g" },
+      { "name": "花生米", "amount": "50", "unit": "g" },
+      { "name": "干辣椒", "amount": "8", "unit": "个" },
+      { "name": "葱", "amount": "20", "unit": "g" },
+      { "name": "姜", "amount": "10", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "生抽", "amount": "10", "unit": "ml" },
+      { "name": "老抽", "amount": "3", "unit": "ml" },
+      { "name": "白糖", "amount": "8", "unit": "g" },
+      { "name": "香醋", "amount": "8", "unit": "ml" },
+      { "name": "料酒", "amount": "10", "unit": "ml" },
+      { "name": "淀粉", "amount": "5", "unit": "g" },
+      { "name": "花椒", "amount": "2", "unit": "g" },
+      { "name": "植物油", "amount": "20", "unit": "ml" }
+    ],
+    "steps": [
+      "鸡胸肉切丁，用盐、料酒、生抽、淀粉腌制10分钟。",
+      "花生米小火炸熟备用。",
+      "干辣椒剪段，葱切段，姜切片备用。",
+      "碗中调汁：生抽、老抽、白糖、香醋、少量水和淀粉搅匀。",
+      "锅中放油，小火炒香花椒和干辣椒，放入姜片、葱段炒香。",
+      "倒入鸡丁翻炒至变色，倒入调好的宫保汁翻炒均匀。",
+      "最后加入花生米快速翻炒几下即可出锅。"
+    ],
+    "cooking_time": "25",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_4",
+    "name": "麻婆豆腐",
+    "ingredients": [
+      { "name": "北豆腐", "amount": "400", "unit": "g" },
+      { "name": "猪肉末", "amount": "80", "unit": "g" },
+      { "name": "葱", "amount": "15", "unit": "g" },
+      { "name": "姜", "amount": "10", "unit": "g" },
+      { "name": "蒜", "amount": "10", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "豆瓣酱", "amount": "20", "unit": "g" },
+      { "name": "盐", "amount": "2", "unit": "g" },
+      { "name": "生抽", "amount": "8", "unit": "ml" },
+      { "name": "花椒粉", "amount": "3", "unit": "g" },
+      { "name": "辣椒粉", "amount": "3", "unit": "g" },
+      { "name": "淀粉", "amount": "5", "unit": "g" },
+      { "name": "植物油", "amount": "20", "unit": "ml" }
+    ],
+    "steps": [
+      "豆腐切小块，用热水加少量盐焯一下去豆腥味，捞出沥干。",
+      "葱姜蒜切末备用。",
+      "锅中倒油，下猪肉末炒散变色，加入豆瓣酱炒出红油。",
+      "加入葱姜蒜末炒香，倒入适量清水煮开。",
+      "放入豆腐小火煮5分钟，让豆腐入味。",
+      "用淀粉水勾芡，撒入花椒粉和辣椒粉，轻轻推匀即可出锅。"
+    ],
+    "cooking_time": "25",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_5",
+    "name": "青椒炒肉丝",
+    "ingredients": [
+      { "name": "猪里脊肉", "amount": "250", "unit": "g" },
+      { "name": "青椒", "amount": "120", "unit": "g" },
+      { "name": "姜", "amount": "8", "unit": "g" },
+      { "name": "蒜", "amount": "8", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "生抽", "amount": "10", "unit": "ml" },
+      { "name": "老抽", "amount": "3", "unit": "ml" },
+      { "name": "料酒", "amount": "10", "unit": "ml" },
+      { "name": "淀粉", "amount": "5", "unit": "g" },
+      { "name": "植物油", "amount": "20", "unit": "ml" }
+    ],
+    "steps": [
+      "猪里脊肉切细丝，用盐、料酒、生抽、淀粉腌制10分钟。",
+      "青椒去籽切丝，姜蒜切片备用。",
+      "锅中倒油，油热后下肉丝滑炒至变色盛出。",
+      "锅中留少许油，下姜蒜片炒香，放入青椒丝大火翻炒。",
+      "加入肉丝一起翻炒，调入盐和少许生抽炒匀即可出锅。"
+    ],
+    "cooking_time": "20",
+    "difficulty": "easy"
+  },
+  {
+    "id": "recipe_6",
+    "name": "红烧肉",
+    "ingredients": [
+      { "name": "五花肉", "amount": "500", "unit": "g" },
+      { "name": "葱", "amount": "20", "unit": "g" },
+      { "name": "姜", "amount": "15", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "4", "unit": "g" },
+      { "name": "生抽", "amount": "15", "unit": "ml" },
+      { "name": "老抽", "amount": "10", "unit": "ml" },
+      { "name": "白糖", "amount": "20", "unit": "g" },
+      { "name": "料酒", "amount": "20", "unit": "ml" },
+      { "name": "八角", "amount": "2", "unit": "个" }
+    ],
+    "steps": [
+      "五花肉切方块，冷水下锅焯水去血沫，捞出洗净沥干。",
+      "锅中少量油，下白糖小火炒糖色至棕红。",
+      "倒入五花肉翻炒上色，加入料酒、生抽、老抽翻炒均匀。",
+      "加入葱段、姜片、八角，倒入没过肉的热水，大火煮开。",
+      "转小火炖40-60分钟至肉软糯，收汁时加入盐调味即可。"
+    ],
+    "cooking_time": "60",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_7",
+    "name": "鱼香肉丝",
+    "ingredients": [
+      { "name": "猪里脊肉", "amount": "250", "unit": "g" },
+      { "name": "胡萝卜", "amount": "40", "unit": "g" },
+      { "name": "木耳", "amount": "20", "unit": "g" },
+      { "name": "青椒", "amount": "60", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "郫县豆瓣酱", "amount": "15", "unit": "g" },
+      { "name": "盐", "amount": "2", "unit": "g" },
+      { "name": "白糖", "amount": "12", "unit": "g" },
+      { "name": "香醋", "amount": "12", "unit": "ml" },
+      { "name": "生抽", "amount": "10", "unit": "ml" },
+      { "name": "淀粉", "amount": "8", "unit": "g" }
+    ],
+    "steps": [
+      "里脊肉切丝，用盐、生抽、淀粉腌制10分钟。",
+      "木耳泡发切丝，胡萝卜、青椒切丝备用。",
+      "碗中调鱼香汁：生抽、香醋、白糖、少许盐、淀粉和清水搅匀。",
+      "锅中倒油，下豆瓣酱小火炒出红油。",
+      "放入肉丝翻炒至变色，加入胡萝卜丝、木耳丝、青椒丝翻炒。",
+      "倒入调好的鱼香汁，翻炒均匀至汤汁浓稠即可出锅。"
+    ],
+    "cooking_time": "25",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_8",
+    "name": "酸辣土豆丝",
+    "ingredients": [
+      { "name": "土豆", "amount": "300", "unit": "g" },
+      { "name": "青椒", "amount": "40", "unit": "g" },
+      { "name": "红椒", "amount": "20", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "白醋", "amount": "10", "unit": "ml" },
+      { "name": "干辣椒", "amount": "3", "unit": "个" },
+      { "name": "花椒", "amount": "2", "unit": "g" },
+      { "name": "植物油", "amount": "15", "unit": "ml" }
+    ],
+    "steps": [
+      "土豆去皮切细丝，用清水反复冲洗去多余淀粉，沥干备用。",
+      "青椒红椒切丝备用。",
+      "锅中倒油，小火炒香花椒和干辣椒。",
+      "下土豆丝大火快炒至略透明。",
+      "加入青红椒丝翻炒，加入盐调味。",
+      "出锅前沿锅边淋入白醋快速翻炒几下即可。"
+    ],
+    "cooking_time": "15",
+    "difficulty": "easy"
+  },
+  {
+    "id": "recipe_9",
+    "name": "清炒西兰花",
+    "ingredients": [
+      { "name": "西兰花", "amount": "300", "unit": "g" },
+      { "name": "蒜", "amount": "10", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "植物油", "amount": "10", "unit": "ml" }
+    ],
+    "steps": [
+      "西兰花掰成小朵，用淡盐水浸泡后冲洗干净。",
+      "烧一锅水，加少量盐和油，将西兰花焯水1分钟捞出沥干。",
+      "蒜切片备用。",
+      "锅中倒油，下蒜片炒香，倒入西兰花大火翻炒。",
+      "加入盐调味，炒匀即可出锅。"
+    ],
+    "cooking_time": "12",
+    "difficulty": "easy"
+  },
+  {
+    "id": "recipe_10",
+    "name": "可乐鸡翅",
+    "ingredients": [
+      { "name": "鸡中翅", "amount": "600", "unit": "g" },
+      { "name": "姜", "amount": "10", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "可乐", "amount": "330", "unit": "ml" },
+      { "name": "生抽", "amount": "15", "unit": "ml" },
+      { "name": "盐", "amount": "2", "unit": "g" },
+      { "name": "植物油", "amount": "10", "unit": "ml" }
+    ],
+    "steps": [
+      "鸡翅洗净，在表面划两刀便于入味，姜切片备用。",
+      "锅中倒油，下鸡翅煎至两面微黄。",
+      "加入姜片翻炒出香味。",
+      "倒入可乐和生抽，液体大致没过鸡翅。",
+      "大火烧开后转中小火炖20分钟至鸡翅熟透。",
+      "大火收汁至稍粘稠，根据口味加入少量盐调味即可。"
+    ],
+    "cooking_time": "30",
+    "difficulty": "easy"
+  },
+  {
+    "id": "recipe_11",
+    "name": "红烧茄子",
+    "ingredients": [
+      { "name": "长茄子", "amount": "350", "unit": "g" },
+      { "name": "青椒", "amount": "40", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "生抽", "amount": "10", "unit": "ml" },
+      { "name": "老抽", "amount": "5", "unit": "ml" },
+      { "name": "白糖", "amount": "5", "unit": "g" },
+      { "name": "蒜", "amount": "10", "unit": "g" },
+      { "name": "植物油", "amount": "25", "unit": "ml" }
+    ],
+    "steps": [
+      "茄子切条，稍微撒盐抓匀静置5分钟挤掉部分水分。",
+      "青椒切块，蒜切末备用。",
+      "锅中倒入较多油，将茄子煎至表面金黄后捞出控油。",
+      "锅中留少许油，下蒜末炒香，加入生抽、老抽、白糖和少量清水煮开。",
+      "倒入茄子和青椒翻炒，让茄子裹上汤汁。",
+      "加盐调味，汤汁略收干即可出锅。"
+    ],
+    "cooking_time": "25",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_12",
+    "name": "酸菜鱼",
+    "ingredients": [
+      { "name": "草鱼片", "amount": "400", "unit": "g" },
+      { "name": "酸菜", "amount": "150", "unit": "g" },
+      { "name": "豆芽", "amount": "80", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "4", "unit": "g" },
+      { "name": "料酒", "amount": "15", "unit": "ml" },
+      { "name": "生抽", "amount": "8", "unit": "ml" },
+      { "name": "花椒", "amount": "3", "unit": "g" },
+      { "name": "干辣椒", "amount": "6", "unit": "个" },
+      { "name": "姜", "amount": "10", "unit": "g" }
+    ],
+    "steps": [
+      "鱼片用盐、料酒、生抽和少量淀粉抓匀腌制15分钟。",
+      "酸菜切段略冲洗，豆芽洗净备用。",
+      "锅中倒油，下花椒、干辣椒、姜片炒香。",
+      "加入酸菜翻炒出香味，倒入适量清水煮开。",
+      "加入豆芽煮两分钟，将汤和酸菜豆芽倒入大碗底部。",
+      "锅内再倒入汤汁煮开，分批下鱼片滑熟，浇在酸菜上即可。"
+    ],
+    "cooking_time": "35",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_13",
+    "name": "水煮牛肉",
+    "ingredients": [
+      { "name": "牛里脊", "amount": "350", "unit": "g" },
+      { "name": "豆芽", "amount": "100", "unit": "g" },
+      { "name": "大白菜", "amount": "80", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "郫县豆瓣酱", "amount": "20", "unit": "g" },
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "生抽", "amount": "10", "unit": "ml" },
+      { "name": "淀粉", "amount": "8", "unit": "g" },
+      { "name": "花椒", "amount": "4", "unit": "g" },
+      { "name": "干辣椒", "amount": "10", "unit": "个" },
+      { "name": "植物油", "amount": "30", "unit": "ml" }
+    ],
+    "steps": [
+      "牛肉切薄片，用盐、生抽、淀粉和少量油抓匀腌制15分钟。",
+      "豆芽、大白菜洗净，切段备用。",
+      "锅中倒油，下豆瓣酱炒出红油，加入适量清水煮开。",
+      "另起锅将豆芽和白菜焯熟，铺在大碗底部。",
+      "汤煮开后分批下牛肉片，划散煮至变色立即捞出，连同汤一起倒入大碗中。",
+      "表面撒上花椒和干辣椒碎，另起一小锅烧热油浇在表面激香即可。"
+    ],
+    "cooking_time": "35",
+    "difficulty": "hard"
+  },
+  {
+    "id": "recipe_14",
+    "name": "蒜蓉生菜",
+    "ingredients": [
+      { "name": "生菜", "amount": "250", "unit": "g" },
+      { "name": "蒜", "amount": "15", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "植物油", "amount": "10", "unit": "ml" }
+    ],
+    "steps": [
+      "生菜洗净沥干，蒜剁成蒜蓉备用。",
+      "锅中倒油，下蒜蓉小火炒香。",
+      "开大火，放入生菜快速翻炒。",
+      "加入盐调味，炒至生菜断生即可出锅。"
+    ],
+    "cooking_time": "8",
+    "difficulty": "easy"
+  },
+  {
+    "id": "recipe_15",
+    "name": "香菇青菜",
+    "ingredients": [
+      { "name": "香菇", "amount": "120", "unit": "g" },
+      { "name": "小青菜", "amount": "250", "unit": "g" },
+      { "name": "蒜", "amount": "10", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "生抽", "amount": "5", "unit": "ml" },
+      { "name": "植物油", "amount": "10", "unit": "ml" }
+    ],
+    "steps": [
+      "香菇洗净切片，小青菜洗净沥干，蒜切片备用。",
+      "锅中倒油，下蒜片炒香，放入香菇片翻炒出香味。",
+      "加入青菜大火翻炒至稍软。",
+      "加入盐和少量生抽调味，炒匀即可出锅。"
+    ],
+    "cooking_time": "12",
+    "difficulty": "easy"
+  },
+  {
+    "id": "recipe_16",
+    "name": "回锅肉",
+    "ingredients": [
+      { "name": "五花肉", "amount": "400", "unit": "g" },
+      { "name": "青椒", "amount": "80", "unit": "g" },
+      { "name": "蒜苗", "amount": "60", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "豆瓣酱", "amount": "15", "unit": "g" },
+      { "name": "生抽", "amount": "10", "unit": "ml" },
+      { "name": "料酒", "amount": "10", "unit": "ml" },
+      { "name": "白糖", "amount": "5", "unit": "g" }
+    ],
+    "steps": [
+      "五花肉冷水下锅，加入姜片和料酒煮至八成熟，捞出晾凉后切薄片。",
+      "青椒切块，蒜苗切段备用。",
+      "锅中不放油，下五花肉小火煸出油脂，煎至微卷微黄。",
+      "加入豆瓣酱炒出红油，再加入生抽和白糖调味。",
+      "放入青椒和蒜苗大火翻炒至断生即可出锅。"
+    ],
+    "cooking_time": "35",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_17",
+    "name": "红烧排骨",
+    "ingredients": [
+      { "name": "猪肋排", "amount": "600", "unit": "g" },
+      { "name": "姜", "amount": "10", "unit": "g" },
+      { "name": "葱", "amount": "15", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "4", "unit": "g" },
+      { "name": "生抽", "amount": "15", "unit": "ml" },
+      { "name": "老抽", "amount": "10", "unit": "ml" },
+      { "name": "白糖", "amount": "15", "unit": "g" },
+      { "name": "料酒", "amount": "20", "unit": "ml" }
+    ],
+    "steps": [
+      "排骨冷水下锅焯水去血沫，捞出洗净沥干。",
+      "锅中少许油，下白糖小火炒糖色至棕红。",
+      "倒入排骨翻炒上色，加入料酒、生抽、老抽翻炒均匀。",
+      "加入姜片、葱段和适量热水，大火煮开后转小火焖40分钟。",
+      "待排骨软烂，根据口味加盐，大火收汁至浓稠即可。"
+    ],
+    "cooking_time": "50",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_18",
+    "name": "番茄牛腩",
+    "ingredients": [
+      { "name": "牛腩", "amount": "600", "unit": "g" },
+      { "name": "西红柿", "amount": "3", "unit": "个" },
+      { "name": "洋葱", "amount": "50", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "4", "unit": "g" },
+      { "name": "番茄酱", "amount": "20", "unit": "g" },
+      { "name": "生抽", "amount": "10", "unit": "ml" },
+      { "name": "白糖", "amount": "5", "unit": "g" },
+      { "name": "料酒", "amount": "15", "unit": "ml" }
+    ],
+    "steps": [
+      "牛腩切块，冷水下锅焯水去血沫，捞出备用。",
+      "西红柿切块，洋葱切丝备用。",
+      "锅中倒油，下洋葱炒香，加入牛腩翻炒片刻。",
+      "加入番茄酱、生抽、料酒翻炒均匀。",
+      "倒入西红柿和足量清水，大火煮开后转小火炖60分钟。",
+      "炖至牛腩软烂，加入盐和少量白糖调味即可。"
+    ],
+    "cooking_time": "80",
+    "difficulty": "hard"
+  },
+  {
+    "id": "recipe_19",
+    "name": "口水鸡",
+    "ingredients": [
+      { "name": "鸡腿", "amount": "600", "unit": "g" },
+      { "name": "花生米", "amount": "30", "unit": "g" },
+      { "name": "黄瓜", "amount": "80", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "4", "unit": "g" },
+      { "name": "生抽", "amount": "10", "unit": "ml" },
+      { "name": "香醋", "amount": "8", "unit": "ml" },
+      { "name": "辣椒油", "amount": "15", "unit": "ml" },
+      { "name": "花椒油", "amount": "5", "unit": "ml" },
+      { "name": "白糖", "amount": "5", "unit": "g" },
+      { "name": "蒜", "amount": "10", "unit": "g" }
+    ],
+    "steps": [
+      "鸡腿冷水下锅，加入姜片和少量料酒，煮至熟透，捞出放入凉水中冷却后去骨切块。",
+      "黄瓜切条铺在盘底，将鸡块码在上面。",
+      "蒜切末，花生米压碎备用。",
+      "碗中调汁：生抽、香醋、辣椒油、花椒油、白糖、蒜末和少量盐搅匀。",
+      "将调好的料汁淋在鸡块上，撒上花生碎即可。"
+    ],
+    "cooking_time": "35",
+    "difficulty": "medium"
+  },
+  {
+    "id": "recipe_20",
+    "name": "鸡蛋炒饭",
+    "ingredients": [
+      { "name": "米饭", "amount": "300", "unit": "g" },
+      { "name": "鸡蛋", "amount": "2", "unit": "个" },
+      { "name": "葱", "amount": "10", "unit": "g" }
+    ],
+    "seasonings": [
+      { "name": "盐", "amount": "3", "unit": "g" },
+      { "name": "生抽", "amount": "5", "unit": "ml" },
+      { "name": "植物油", "amount": "15", "unit": "ml" }
+    ],
+    "steps": [
+      "鸡蛋打散，葱切葱花，米饭提前散开备用。",
+      "锅中倒油，倒入蛋液炒成小块盛出备用。",
+      "锅中再加少许油，下米饭翻炒散开。",
+      "加入盐和生抽调味，最后加入蛋粒和葱花翻炒均匀即可。"
+    ],
+    "cooking_time": "15",
+    "difficulty": "easy"
+  }
+]
